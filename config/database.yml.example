@@ -1,0 +1,29 @@
+# PostgreSQL. Version 9.3.
+#
+# Configure Using Gemfile
+# gem 'pg'
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: inventory_development
+  pool: 5
+  username: rajdeepb
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: inventory_test
+  pool: 5
+  username: rajdeepb
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: inventory_production
+  pool: 5
+  username: rajdeepb
+  password:
+
