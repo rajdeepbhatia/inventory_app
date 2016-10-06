@@ -12,6 +12,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'paperclip', '~> 5.0.0'
+gem 'haml'
+gem 'haml-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 
@@ -19,11 +21,15 @@ group :development, :test do
   gem 'pry'
   gem 'awesome_print'
   gem 'spring'
+  gem 'rspec-rails'
+end
+
+group :development do
+  gem 'listen', '~> 3.0.5'
 end
 
 group :test do
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
-  gem 'rspec-rails'
   gem 'database_cleaner'
 end
