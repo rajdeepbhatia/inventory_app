@@ -1,0 +1,40 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap/theme";
+
+@media screen and (min-width:768px){
+  .navbar-brand-centered {
+    position: absolute;
+    left: 50%;
+    display: block;
+    width: 160px;
+    text-align: center;
+    background-color: #eee;
+  }
+  .navbar>.container .navbar-brand-centered,
+  .navbar>.container-fluid .navbar-brand-centered {
+    margin-left: -80px;
+  }
+}
+
+body{
+  background-color: #fafafa;
+}
+
+.input-group{
+  margin-bottom: 25px;
+}
+
+.margin-top-80{
+  margin-top: 80px;
+}
+
+.small-link-ul{
+  border-top: 1px solid#888;
+  padding-top:15px;
+  font-size:85%
+}
+
+.panel-body{
+  padding-top: 30px;
+}

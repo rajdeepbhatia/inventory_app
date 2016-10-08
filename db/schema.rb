@@ -50,7 +50,6 @@ ActiveRecord::Schema.define(version: 20161008072820) do
     t.integer  "user_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.index ["serial"], name: "index_items_on_serial", unique: true, using: :btree
     t.index ["sku"], name: "index_items_on_sku", unique: true, using: :btree
   end
 

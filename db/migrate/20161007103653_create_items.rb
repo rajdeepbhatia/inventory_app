@@ -14,6 +14,5 @@ class CreateItems < ActiveRecord::Migration[5.0]
       t.timestamps
     end
     add_index :items, :sku, unique: true
-    add_index :items, :serial, unique: true
   end
 end

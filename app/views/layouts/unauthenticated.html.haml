@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title Inventory Management System
+    = csrf_meta_tags
+    = stylesheet_link_tag    'unauthenticated', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'unauthenticated', 'data-turbolinks-track': 'reload'
+  %body
+    = render 'layouts/shared/unauthenticated_header'
+    .container
+      .row
+        = render 'layouts/shared/flash_messages', flash: flash
+      .row
+        = yield

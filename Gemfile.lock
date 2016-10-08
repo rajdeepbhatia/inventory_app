@@ -47,6 +47,7 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     builder (3.2.2)
+    cancancan (1.15.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -223,6 +224,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   bootstrap-sass
+  cancancan
   coffee-rails (~> 4.2)
   database_cleaner
   devise

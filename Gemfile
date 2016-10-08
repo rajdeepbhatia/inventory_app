@@ -14,6 +14,7 @@ gem 'devise'
 gem 'paperclip', '~> 5.0.0'
 gem 'haml'
 gem 'haml-rails'
+gem 'cancancan'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 
