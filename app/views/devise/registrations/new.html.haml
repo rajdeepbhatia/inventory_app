@@ -7,6 +7,10 @@
         .input-group
           %span.input-group-addon
             %i.glyphicon.glyphicon-user
+          = f.text_field :name, placeholder: 'Name', class: 'form-control', autofocus: true, required: true
+        .input-group
+          %span.input-group-addon
+            %i.glyphicon.glyphicon-user
           = f.email_field :email, placeholder: 'Email', class: 'form-control', autofocus: true, required: true
         .input-group
           %span.input-group-addon
@@ -23,4 +27,4 @@
           .col-md-12.control
             .small-link-ul
               Already registered?
-              = link_to 'Log In!', login_path
+              = link_to 'Log In!', unauthenticated_root_path
