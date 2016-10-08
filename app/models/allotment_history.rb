@@ -1,0 +1,2 @@
+class AllotmentHistory < ApplicationRecord
+end
