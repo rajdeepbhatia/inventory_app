@@ -1,0 +1,24 @@
+%legend
+  Item Images
+  .btn-group.legend-a
+    = link_to 'Reload', item_attachments_path(@item.id), class: 'btn btn-primary btn-sm'
+    = link_to 'Back', :back, class: 'btn btn-default btn-sm'
+
+= form_tag item_attachments_path(@item), class: 'dropzone' do
+  .dz-message
+    Drop images here or click to upload.
+    %span.note
+      (After uploading, click on 'Reload' button above to see the newly uploaded images)
+%hr
+#itemImages
+  - if @attachments.blank?
+    .alert.alert-info
+      No image present for this item.
+  -else
+    - @attachments.each do |attachment|
+      .col-md-2.img-gallery
+        .img{:style => "background-image:url(#{attachment.image.url(:medium)});"}
+
+
+
+

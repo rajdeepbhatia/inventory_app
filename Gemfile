@@ -15,6 +15,9 @@ gem 'paperclip', '~> 5.0.0'
 gem 'haml'
 gem 'haml-rails'
 gem 'cancancan'
+gem 'jquery-datatables-rails', '~> 3.4.0'
+gem 'nprogress-rails'
+gem 'dropzonejs-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 
@@ -23,6 +26,8 @@ group :development, :test do
   gem 'awesome_print'
   gem 'spring'
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -31,6 +36,5 @@ end
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'factory_girl_rails'
   gem 'database_cleaner'
 end

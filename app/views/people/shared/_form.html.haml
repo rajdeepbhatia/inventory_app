@@ -1,0 +1,12 @@
+= form_for @person, remote: true do |f|
+  .form-group
+    %label Name
+    = f.text_field :name, class: 'form-control', placeholder: 'Enter Person Name', autofocus: true, required: true
+    %p.help-block.error-red= @person.errors[:name].first
+  .form-group
+    %label Mobile Number
+    = f.text_field :mobile_no, class: 'form-control', placeholder: 'Enter Mobile Number', required: true
+    %p.help-block.error-red= @person.errors[:mobile_no].first
+  %hr
+  = f.submit 'Save', class: 'btn btn-success blockui'
+  = link_to 'Cancel', :back, class: 'btn btn-default'

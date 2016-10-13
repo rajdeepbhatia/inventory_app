@@ -1,0 +1,6 @@
+%legend
+  Listing #{restrict_length(@person.name, 20)}'s Items
+  .btn-group.legend-a
+    = link_to 'All Items', authenticated_root_path, class: 'btn btn-default btn-sm'
+    = link_to 'All People', people_path, class: 'btn btn-default btn-sm'
+= render 'items/shared/table'

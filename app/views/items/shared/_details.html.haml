@@ -1,0 +1,31 @@
+%table.table.table-striped
+  %tbody
+    %tr
+      %td NAME
+      %td
+        = @item.name
+        (#{link_to 'edit', edit_item_path(@item.id), class: 'small'})
+    %tr
+      %td CATEGORY
+      %td= @item.category_name
+    %tr
+      %td BRAND
+      %td= @item.brand_name
+    %tr
+      %td SKU
+      %td= @item.sku
+    %tr
+      %td SERIAL #
+      %td= @item.serial
+    %tr
+      %td PURCHASED ON
+      %td= @item.purchased_at
+    %tr
+      %td ALLOTTED TO
+      %td
+        - unless @item.person_id.blank?
+          #{link_to @item.person_name, person_path(@item.person_id || '#'), remote: true, class: 'common-modal'}
+          (#{link_to 'View Allotment History', item_allotment_histories_path(@item), remote: true, class: 'small common-modal'})
+    %tr
+      %td CREATED BY
+      %td= link_to @item.creator, user_path(@item.user_id), class: 'common-modal', remote: true

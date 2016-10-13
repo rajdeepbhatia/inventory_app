@@ -1,0 +1,5 @@
+<% if @person.persisted? %>
+    Turbolinks.visit("<%= people_path %>");
+<% else %>
+    $('#personForm').html("<%= j render 'people/shared/form' %>");
+<% end %>

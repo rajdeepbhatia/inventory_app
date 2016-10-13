@@ -1,0 +1,5 @@
+<% if @item.persisted? %>
+    Turbolinks.visit("<%= item_attachments_path(@item) %>");
+<% else %>
+    $('#itemForm').html("<%= j render 'items/shared/form' %>");
+<% end %>

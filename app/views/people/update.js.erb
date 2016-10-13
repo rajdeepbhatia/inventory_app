@@ -1,0 +1,9 @@
+<% unless flash[:error].blank? %>
+    Turbolinks.visit("<%= people_path %>");
+<% end %>
+
+<% unless @updated %>
+    $('#personForm').html("<%= j render 'people/shared/form' %>");
+<% end %>
+
+App.unBlockUI($('.blockable'));

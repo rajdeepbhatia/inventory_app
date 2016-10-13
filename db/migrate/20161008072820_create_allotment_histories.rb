@@ -4,7 +4,7 @@ class CreateAllotmentHistories < ActiveRecord::Migration[5.0]
       t.integer :person_id
       t.integer :item_id
       t.integer :user_id
-      t.boolean :is_allotted
+      t.boolean :is_allotted, default: :false
 
       t.timestamps
     end

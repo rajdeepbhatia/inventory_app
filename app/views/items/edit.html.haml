@@ -1,0 +1,10 @@
+%legend
+  Edit Item
+  .btn-group.legend-a
+    = link_to 'Edit Images', item_attachments_path(@item.id), class: 'btn btn-primary btn-sm'
+    = link_to 'Delete Item', item_path(@item.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm'
+    = link_to 'Back', :back, class: 'btn btn-default btn-sm'
+.row
+  .col-md-8.col-md-offset-2
+    #itemForm.blockable
+      = render 'items/shared/form'

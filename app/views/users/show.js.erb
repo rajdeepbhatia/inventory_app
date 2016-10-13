@@ -1,0 +1,8 @@
+App.unBlockUI($('.modal-dialog'));
+<% unless @error.blank? %>
+    $('#flashMessages').html("<%= j flash_message(t('users.error.not_found'), 'alert-danger') %>");
+    $('#commonModal').modal('hide');
+<% else %>
+    $('#commonModalTitle').html('User Details');
+    $('#commonModalBody').html("<%= j render 'users/shared/details' %>");
+<% end %>

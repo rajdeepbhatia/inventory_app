@@ -1,0 +1,8 @@
+App.unBlockUI($('.modal-dialog'));
+<% unless @error.blank? %>
+    $('#flashMessages').html("<%= j flash_message(@error, 'alert-danger') %>");
+    $('#commonModal').modal('hide');
+<% else %>
+    $('#commonModalTitle').html('Person Details');
+    $('#commonModalBody').html("<%= j render 'people/shared/details' %>");
+<% end %>

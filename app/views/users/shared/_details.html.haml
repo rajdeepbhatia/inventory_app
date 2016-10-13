@@ -1,0 +1,14 @@
+%table.table.table-striped
+  %tbody
+    %tr
+      %td NAME
+      %td= @user.name
+    %tr
+      %td EMAIL
+      %td= @user.email
+    %tr
+      %td JOINED ON
+      %td= @user.created_at
+    %tr
+      %td LAST SEEN
+      %td= @user.current_sign_in_at

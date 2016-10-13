@@ -1,0 +1,2 @@
+module AllotmentHistoriesHelper
+end

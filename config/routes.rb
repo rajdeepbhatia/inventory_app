@@ -14,7 +14,20 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :items
-  resources :people
-  resources :allotment_histories
+  resources :items do
+    member do
+      put :change_allotment_status
+      get :allotment_options
+    end
+    resources :attachments
+    resources :allotment_histories
+  end
+
+  resources :people do
+    member do
+      get :items
+    end
+  end
+
+  resources :users, only: :show
 end

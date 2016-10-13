@@ -9,47 +9,18 @@
       %a.navbar-brand{:href => '/'} IMS
     #navCollapse.collapse.navbar-collapse
       %ul.nav.navbar-nav
-        %li.active
-          %a{:href => "#"}
-            Link
-            %span.sr-only (current)
-        %li
-          %a{:href => "#"} Link
-        %li.dropdown
-          %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-            Dropdown
-            %span.caret
-          %ul.dropdown-menu
-            %li
-              %a{:href => "#"} Action
-            %li
-              %a{:href => "#"} Another action
-            %li
-              %a{:href => "#"} Something else here
-            %li.divider{:role => "separator"}
-            %li
-              %a{:href => "#"} Separated link
-            %li.divider{:role => "separator"}
-            %li
-              %a{:href => "#"} One more separated link
-      %form.navbar-form.navbar-left
-        .form-group
-          %input.form-control{:placeholder => "Search", :type => "text"}/
-        %button.btn.btn-default{:type => "submit"} Submit
+        %li{ class: "#{'active' if current_page?(authenticated_root_path)}" }
+          = link_to 'Home', authenticated_root_path
+        %li{ class: "#{'active' if current_page?(people_path)}" }
+          = link_to 'People', people_path
       %ul.nav.navbar-nav.navbar-right
-        %li
-          %a{:href => "#"} Link
         %li.dropdown
           %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-            Dropdown
+            Options
             %span.caret
           %ul.dropdown-menu
             %li
-              %a{:href => "#"} Action
-            %li
-              %a{:href => "#"} Another action
-            %li
-              %a{:href => "#"} Something else here
+              = link_to 'Edit Profile', 'javascript:void(0);'
             %li.divider{:role => "separator"}
             %li
               = link_to 'Log Out', destroy_user_session_path, method: :delete

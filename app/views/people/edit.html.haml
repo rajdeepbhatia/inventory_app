@@ -1,0 +1,9 @@
+%legend
+  Edit Person Profile
+  .btn-group.legend-a
+    = link_to 'Delete Person', person_path(@person.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm'
+    = link_to 'Back', :back, class: 'btn btn-default btn-sm'
+.row
+  .col-md-8.col-md-offset-2
+    #personForm.blockable
+      = render 'people/shared/form'

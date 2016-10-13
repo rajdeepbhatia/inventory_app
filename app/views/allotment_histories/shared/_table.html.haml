@@ -1,0 +1,20 @@
+%table.table.table-striped.common-table.display.responsive.no-wrap
+  %thead
+    %tr
+      %th #
+      %th Item
+      %th Type
+      %th Person
+      %th Done By
+      %th Done On
+  %tbody
+    - @histories.each_with_index do |history, index|
+      %tr{ id: "history_tr_#{history.id}" }
+        %td= index + 1
+        %td= link_to restrict_length(history.item_name), item_path(history.item_id),
+          data: { 'toggle' => 'tooltip' }, title: history.item_name, remote: true, class: 'common-modal'
+        %td= history_type(history.is_allotted)
+        - unless history.person_id.blank?
+          %td= link_to restrict_length(history.person_name), person_path(history.person_id), remote: true, class: 'common-modal'
+        %td= link_to restrict_length(history.user_name), user_path(history.user_id), class: 'common-modal', remote: true
+        %td= history.created_at

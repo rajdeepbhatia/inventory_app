@@ -1,0 +1,10 @@
+App.unBlockUI($('.modal-dialog'));
+<% unless @error.blank? %>
+    $('#flashMessages').html("<%= j flash_message(t('items.error.not_found'), 'alert-danger') %>");
+    $('#commonModal').modal('hide');
+<% else %>
+    $('#commonModalTitle').html('Item Allotment History');
+    $('#commonModalBody').html("<%= j render 'allotment_histories/shared/table' %>");
+    $('#commonModal > .modal-dialog').addClass('modal-lg');
+    TableManager.initCommonTable();
+<% end %>

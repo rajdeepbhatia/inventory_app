@@ -1,0 +1,48 @@
+= form_for @item, remote: true do |f|
+  .form-group
+    %label Name
+    = f.text_field :name, class: 'form-control', placeholder: 'Enter Item Name', autofocus: true, required: true
+    %p.help-block.error-red= @item.errors[:name].first
+  .form-group
+    %label Category
+    = f.select :category_id, options_for_select(Category.all.map{ |c| [c.name, c.id] }, @item.category_id.to_s),
+      { include_blank: 'Select Category' },
+      class: 'form-control',
+      required: true
+
+    %p.help-block.error-red= @item.errors[:category_id].first
+  .form-group
+    %label Brand
+    = f.select :brand_id, options_for_select(Brand.all.map{ |b| [b.name, b.id] }, @item.brand_id.to_s),
+      { include_blank: 'Select Brand' },
+      class: 'form-control',
+      required: true
+    %p.help-block.error-red= @item.errors[:brand_id].first
+  .form-group
+    %label SKU
+    = f.text_field :sku, class: 'form-control', placeholder: 'Enter Item SKU', required: true
+    %p.help-block.error-red= @item.errors[:sku].first
+  .form-group
+    %label Serial #
+    = f.text_field :serial, class: 'form-control', placeholder: 'Enter Item Serial #', required: true
+    %p.help-block.error-red= @item.errors[:serial].first
+  .form-group
+    %label Warranty Period
+    = f.text_field :warranty_period, class: 'form-control', placeholder: 'Enter Warranty Period, e.g., 1 year'
+    %p.help-block.error-red= @item.errors[:warranty_period].first
+  .form-group
+    %label Purchased on
+    .input-group
+      .input-group-addon
+        %span.glyphicon.glyphicon-calendar
+      = f.text_field :purchased_at, class: 'form-control datepicker', placeholder: 'yyyy/mm/dd'
+      %p.help-block.error-red= @item.errors[:purchased_at].first
+  .form-group
+    %label Assign To
+    = f.select :person_id, options_for_select(Person.all.map{ |p| ["#{p.name} <#{p.mobile_no}>", p.id] }),
+      { include_blank: 'Select Person' },
+      class: 'form-control'
+    %p.help-block.error-red= @item.errors[:person_id].first
+  %hr
+  = f.submit 'Save', class: 'btn btn-success blockui'
+  = link_to 'Cancel', :back, class: 'btn btn-default'

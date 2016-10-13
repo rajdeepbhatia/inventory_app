@@ -17,5 +17,6 @@
 !/log/.keep
 !/tmp/.keep
 config/database.yml
-/.idea/*
+.idea/workspace.xml
+public/*
 

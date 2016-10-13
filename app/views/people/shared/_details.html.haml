@@ -1,0 +1,18 @@
+%table.table.table-striped
+  %tbody
+    %tr
+      %td NAME
+      %td
+        = @person.name
+        (#{link_to 'edit', edit_person_path(@person.id), class: 'small'})
+    %tr
+      %td MOBILE NUMBER
+      %td= @person.mobile_no
+    %tr
+      %td TOTAL ALLOTTED ITEMS
+      %td
+        = @person.allotted_items_count
+        (#{link_to 'View Allotted Items', items_person_path(@person.id), class: 'small'})
+    %tr
+      %td CREATED ON
+      %td= @person.created_at

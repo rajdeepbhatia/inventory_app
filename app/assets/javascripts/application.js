@@ -2,3 +2,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require dataTables/jquery.dataTables
+//= require dataTables/extras/dataTables.responsive
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+//= require nprogress
+//= require nprogress-turbolinks
+//= require bootstrap-datepicker.min
+//= require dropzone
+//= require dropzone_config
+//= require jquery.blockUI
+//= require table_manager
+//= require app_manager
+//= require common

@@ -3,12 +3,17 @@
   %head
     %title Inventory Management System
     = csrf_meta_tags
+    %meta{ name: 'turbolinks-cache-control', content: 'no-cache' }
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = render 'layouts/shared/authenticated_header'
     .container
       .row
-        = render 'layouts/shared/flash_messages', flash: flash
+        .col-md-12#flashMessages
+          = render 'layouts/shared/flash_messages', flash: flash
       .row
-        = yield
+        .col-md-12
+          = yield
+          = render 'layouts/shared/common_modal'
+

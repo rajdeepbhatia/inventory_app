@@ -1,0 +1,11 @@
+<% unless flash[:error].blank? %>
+    Turbolinks.visit("<%= authenticated_root_path %>");
+<% end %>
+
+<% unless @updated %>
+    $('#itemForm').html("<%= j render 'items/shared/form' %>");
+<% else %>
+    $('#flashMessages').html("<%= j flash_message(t('items.success.updated'), 'alert-success') %>");
+<% end %>
+
+App.unBlockUI($('.blockable'));

@@ -1,0 +1,19 @@
+.dropzone {
+  background: #F2F2F2 none repeat scroll 0 0;
+  border: 2px dashed #31708f;
+  border-radius: 5px;
+
+
+  .dz-message{
+    font-size: 19px;
+    color: #31708f;
+
+    .note {
+      display: block;
+      font-size: 0.7em;
+      font-weight: 200;
+      margin-top: 1.4rem;
+      color: #31708f;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+App.unBlockUI($('.modal-dialog'));
+<% unless @error.blank? %>
+    $('#flashMessages').html("<%= j flash_message(t('items.error.not_found'), 'alert-danger') %>");
+    $('#commonModal').modal('hide');
+<% else %>
+    $('#commonModalTitle').html('Item Details');
+    $('#commonModalBody').html("<%= j render 'items/shared/details' %>");
+<% end %>
