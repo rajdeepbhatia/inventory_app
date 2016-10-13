@@ -1,24 +1,21 @@
-# README
+## InventoryApp
+A Ruby on Rails 5 based web app
+#### Usage:
+    git clone git@github.com:rajdeepbhatia/inventory_app.git
+    cd inventory_app
+    bundle
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+After bundling, create database.yml file and add configuration, sample configuration can be found in database.yml.example file, then do
 
-Things you may want to cover:
+    rake db:create
+    rake db:migrate
+    rake db:seed
 
-* Ruby version
 
-* System dependencies
+After setting up the DB, you can either create a new user or login using following credentials
 
-* Configuration
+    admin@example.com
+    password
 
-* Database creation
+Thanks!
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
