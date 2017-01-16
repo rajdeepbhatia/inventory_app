@@ -17,5 +17,9 @@ After setting up the DB, you can either create a new user or login using followi
     admin@example.com
     password
 
+#### Upcoming features
+
+Make Datatables ajaxified and write unit tests.
+
 Thanks!
 
